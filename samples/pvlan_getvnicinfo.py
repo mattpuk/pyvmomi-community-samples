@@ -126,22 +126,12 @@ def GetVMNics(vm):
                   ' (VLAN ' + vlanId,vm.name + ')')
 
 
-#def GetArgs():
-#    if len(sys.argv) != 4:
-#        host = raw_input("vCenter IP: ")
-#        user = raw_input("Username: ")
-#        password = raw_input("Password: ")
-#    else:
-#        host, user, password = sys.argv[1:]
-#    return host, user, password
-
 
 def main():
     global content, hosts, hostPgDict
     args = setup_args()
     si = None
     try:
-#host, user, password = GetArgs()
     
         si = SmartConnectNoSSL(host=args.host,
                           user=args.user,
